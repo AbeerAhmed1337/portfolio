@@ -35,12 +35,22 @@ const Hero = () => {
           </p>
           
           <div className="btn-group" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            <a href="#projects" className="btn btn-primary">
+            <motion.a 
+              whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(99, 102, 241, 0.4)" }}
+              whileTap={{ scale: 0.95 }}
+              href="#projects" 
+              className="btn btn-primary"
+            >
               View My Work <ArrowRight size={18} />
-            </a>
-            <a href="#contact" className="btn btn-secondary">
+            </motion.a>
+            <motion.a 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="#contact" 
+              className="btn btn-secondary"
+            >
               Let's Build Something
-            </a>
+            </motion.a>
           </div>
         </motion.div>
 
@@ -51,9 +61,20 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}
         >
-          <div style={{ position: 'relative', width: '100%', maxWidth: '400px' }}>
+          <motion.div 
+            animate={{ y: [0, -15, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+            style={{ position: 'relative', width: '100%', maxWidth: '400px' }}
+          >
             {/* Glowing background behind image */}
-            <div style={{ position: 'absolute', inset: -20, background: 'var(--accent-glow)', filter: 'blur(60px)', borderRadius: '50%', zIndex: -1 }}></div>
+            <motion.div 
+              animate={{ 
+                scale: [1, 1.1, 1],
+                opacity: [0.4, 0.7, 0.4]
+              }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              style={{ position: 'absolute', inset: -20, background: 'var(--accent-glow)', filter: 'blur(60px)', borderRadius: '50%', zIndex: -1 }}
+            ></motion.div>
             
             {/* The Image */}
             <img 
@@ -72,7 +93,7 @@ const Hero = () => {
                 e.currentTarget.src = 'https://via.placeholder.com/400x500/12121a/6366f1?text=Save+your+image+as+src/assets/profile.png';
               }}
             />
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
