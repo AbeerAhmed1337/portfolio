@@ -29,7 +29,7 @@ const TechStack = () => {
     {
       title: 'AI & ML',
       icon: <BrainCircuit className="text-gradient" size={24} />,
-      skills: ['LLMs', 'LangChain', 'Agentic Workflows', 'RAG']
+      skills: ['LLMs', 'LangChain', 'Agentic Workflows', 'RAG', 'Prompt Engineering']
     },
     {
       title: 'Databases',
