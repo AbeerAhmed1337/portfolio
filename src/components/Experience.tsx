@@ -21,7 +21,7 @@ const Experience = () => {
               </div>
               <div>
                 <h3 className="heading-md" style={{ margin: 0 }}>Software Engineering Intern</h3>
-                <p style={{ color: 'var(--accent-secondary)', fontWeight: 500 }}>10Pearls | May 2026</p>
+                <p style={{ color: 'var(--accent-secondary)', fontWeight: 500 }}>10Pearls | May 2026 - July 2026</p>
               </div>
             </div>
             <p style={{ color: 'var(--text-secondary)' }}>
@@ -36,7 +36,7 @@ const Experience = () => {
               </div>
               <div>
                 <h3 className="heading-md" style={{ margin: 0 }}>Intern</h3>
-                <p style={{ color: 'var(--accent-secondary)', fontWeight: 500 }}>Karachi Development Authority (KDA)</p>
+                <p style={{ color: 'var(--accent-secondary)', fontWeight: 500 }}>Karachi Development Authority (KDA) | June 2025</p>
               </div>
             </div>
             <p style={{ color: 'var(--text-secondary)' }}>
@@ -51,7 +51,7 @@ const Experience = () => {
               </div>
               <div>
                 <h3 className="heading-md" style={{ margin: 0 }}>Software Engineering Graduate</h3>
-                <p style={{ color: '#d946ef', fontWeight: 500 }}>NED University of Engineering and Technology</p>
+                <p style={{ color: '#d946ef', fontWeight: 500 }}>NED University of Engineering and Technology | 2022 - 2026</p>
               </div>
             </div>
             <ul style={{ listStyle: 'none', color: 'var(--text-secondary)', paddingLeft: '0.5rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>

@@ -20,7 +20,7 @@ const Contact = () => {
         </p>
         
         <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
-          <a href="mailto:siddiqui.abeer456@gmail.com" className="btn btn-primary" style={{ padding: '1rem 2rem' }}>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=siddiqui.abeer456@gmail.com&su=Hello%20Abeer" target="_blank" rel="noreferrer" className="btn btn-primary" style={{ padding: '1rem 2rem' }}>
             <Mail size={20} /> siddiqui.abeer456@gmail.com
           </a>
           <a href="https://www.linkedin.com/in/abeer-ahmed-1a5b002b6/" target="_blank" rel="noreferrer" className="btn btn-secondary" style={{ padding: '1rem 2rem' }}>

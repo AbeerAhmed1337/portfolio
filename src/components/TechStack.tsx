@@ -34,7 +34,7 @@ const TechStack = () => {
     {
       title: 'Databases',
       icon: <Database className="text-gradient" size={24} />,
-      skills: ['MongoDB (NoSQL)', 'Neo4j (Graph)']
+      skills: ['MongoDB (NoSQL)', 'Neo4j (Graph)', 'SQL Server']
     },
     {
       title: 'Tools',
@@ -76,7 +76,7 @@ const TechStack = () => {
           <div>
             <h4 style={{ color: 'var(--text-primary)', marginBottom: '0.5rem', fontSize: '1.1rem' }}>Where I Excel</h4>
             <p style={{ color: 'var(--text-secondary)' }}>
-              I am strongest at <strong>architecting chatbot agentic workflows</strong> using various LLMs, designing systems where AI can plan, use tools, and execute multi-step logic autonomously.
+              I excel in both <strong>front-end</strong> and <strong>back-end development</strong>, building robust web applications from the ground up. Additionally, I am highly proficient at <strong>architecting chatbot agentic workflows</strong> using various LLMs, designing systems where AI can plan, use tools, and execute multi-step logic autonomously.
             </p>
           </div>
           <div>

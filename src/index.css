@@ -217,3 +217,31 @@ section {
     display: none;
   }
 }
+
+/* Hero responsive */
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero-container > div {
+    max-width: 100% !important;
+  }
+  .hero-container .badge-container {
+    justify-content: center;
+  }
+  .hero-container .btn-group {
+    justify-content: center;
+  }
+  .hero-container p {
+    margin: 0 auto 2.5rem auto !important;
+  }
+}
