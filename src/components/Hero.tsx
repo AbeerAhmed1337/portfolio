@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Terminal } from 'lucide-react';
 // We are importing the placeholder for the profile image.
-import profileImage from '../assets/WhatsApp Image 2026-06-23 at 8.09.02 PM.jpeg';
+import profileImage from '../assets/WhatsApp Image 2026-06-23 at 9.47.29 PM.jpeg';
 
 const Hero = () => {
   return (
