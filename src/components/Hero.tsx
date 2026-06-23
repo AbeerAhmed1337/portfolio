@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Terminal } from 'lucide-react';
+import { ArrowRight, Terminal, Download } from 'lucide-react';
 // We are importing the placeholder for the profile image.
 import profileImage from '../assets/WhatsApp Image 2026-06-23 at 9.47.29 PM.jpeg';
+import cvFile from '../assets/ABEER AHMED CV 2026.pdf';
 
 const Hero = () => {
   return (
@@ -42,6 +43,16 @@ const Hero = () => {
               className="btn btn-primary"
             >
               View My Work <ArrowRight size={18} />
+            </motion.a>
+            <motion.a 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href={cvFile}
+              download="Abeer_Ahmed_Siddiqui_CV.pdf"
+              className="btn btn-secondary"
+              style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}
+            >
+              <Download size={18} /> Download CV
             </motion.a>
             <motion.a 
               whileHover={{ scale: 1.05 }}
