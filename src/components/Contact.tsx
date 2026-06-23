@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Briefcase, Code, Send } from 'lucide-react';
+import { Mail, Briefcase, Code } from 'lucide-react';
 
 const Contact = () => {
   return (
