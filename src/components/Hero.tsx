@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Terminal, Download } from 'lucide-react';
 // We are importing the placeholder for the profile image.
 import profileImage from '../assets/WhatsApp Image 2026-06-23 at 9.47.29 PM.jpeg';
-import cvFile from '../assets/ABEER_AHMED_CV.pdf';
+import cvFile from '../assets/Muhammad_Abeer_Ahmed_CV.pdf';
 
 const Hero = () => {
   return (
