@@ -1,67 +1,66 @@
 import { motion } from 'framer-motion';
 import { Briefcase, GraduationCap } from 'lucide-react';
+import { experienceItems } from '../data/experience';
+import SectionHeader from './ui/SectionHeader';
 
 const Experience = () => {
   return (
-    <section id="experience">
+    <section id="experience" aria-labelledby="experience-heading">
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 28 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-50px" }}
-        transition={{ duration: 0.6 }}
+        viewport={{ once: true, margin: '-60px' }}
+        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       >
-        <h2 className="heading-lg">Experience & <span className="text-gradient">Engineering Initiatives</span></h2>
-        
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-          
-          <div className="glass-panel" style={{ borderLeft: '4px solid var(--accent-primary)' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
-              <div style={{ background: 'var(--glass-bg)', padding: '0.75rem', borderRadius: '12px' }}>
-                <Briefcase size={24} className="text-gradient" />
-              </div>
-              <div>
-                <h3 className="heading-md" style={{ margin: 0 }}>Software Engineering Intern</h3>
-                <p style={{ color: 'var(--accent-secondary)', fontWeight: 500 }}>10Pearls | May 2026 - July 2026</p>
-              </div>
-            </div>
-            <p style={{ color: 'var(--text-secondary)' }}>
-              Developed a full-stack to-do task management platform utilizing React, ASP.NET Core Web API, and Microsoft SQL Server. Focused on creating a scalable architecture and seamless user experience.
-            </p>
-          </div>
-          
-          <div className="glass-panel" style={{ borderLeft: '4px solid var(--accent-primary)' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
-              <div style={{ background: 'var(--glass-bg)', padding: '0.75rem', borderRadius: '12px' }}>
-                <Briefcase size={24} className="text-gradient" />
-              </div>
-              <div>
-                <h3 className="heading-md" style={{ margin: 0 }}>Intern</h3>
-                <p style={{ color: 'var(--accent-secondary)', fontWeight: 500 }}>Karachi Development Authority (KDA) | June 2025</p>
-              </div>
-            </div>
-            <p style={{ color: 'var(--text-secondary)' }}>
-              Supported technical operations and administrative workflows across cross-functional municipal development projects. Gained hands-on experience in large-scale organizational processes.
-            </p>
-          </div>
+        <SectionHeader
+          eyebrow="Path"
+          title={
+            <span id="experience-heading">
+              Experience &amp; <span className="text-accent">engineering initiatives</span>
+            </span>
+          }
+          description="Internships and academic work that shaped how I design, build, and ship software."
+        />
 
-          <div className="glass-panel" style={{ borderLeft: '4px solid #d946ef' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
-              <div style={{ background: 'var(--glass-bg)', padding: '0.75rem', borderRadius: '12px' }}>
-                <GraduationCap size={24} style={{ color: '#d946ef' }} />
-              </div>
-              <div>
-                <h3 className="heading-md" style={{ margin: 0 }}>Software Engineering Graduate</h3>
-                <p style={{ color: '#d946ef', fontWeight: 500 }}>NED University of Engineering and Technology | 2022 - 2026</p>
-              </div>
-            </div>
-            <ul style={{ listStyle: 'none', color: 'var(--text-secondary)', paddingLeft: '0.5rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <li>• Engineered complex, multi-service architectures as part of intensive academic and personal initiatives.</li>
-              <li>• Led the backend and AI integration for major capstone projects, ensuring seamless communication between Node.js frontends, FastAPI microservices, and graph databases.</li>
-              <li>• Bridged the gap between theoretical computer science and practical deployment by utilizing tools like Docker and Git for CI/CD and version control.</li>
-            </ul>
-          </div>
-
-        </div>
+        <ol className="timeline">
+          {experienceItems.map((item, index) => {
+            const Icon = item.type === 'education' ? GraduationCap : Briefcase;
+            return (
+              <motion.li
+                key={item.id}
+                className="timeline-item"
+                initial={{ opacity: 0, x: -16 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.45, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <span className="timeline-dot" aria-hidden />
+                <article className="timeline-card surface">
+                  <div className="timeline-header">
+                    <div>
+                      <h3 className="heading-md">{item.title}</h3>
+                      <p className="timeline-role">
+                        <Icon size={16} aria-hidden />
+                        {item.org}
+                      </p>
+                    </div>
+                    <time className="timeline-date" dateTime={item.date}>
+                      {item.date}
+                    </time>
+                  </div>
+                  {item.summary ? <p>{item.summary}</p> : null}
+                  {item.points ? (
+                    <ul>
+                      {item.points.map((point) => (
+                        <li key={point}>{point}</li>
+                      ))}
+                    </ul>
+                  ) : null}
+                </article>
+              </motion.li>
+            );
+          })}
+        </ol>
       </motion.div>
     </section>
   );

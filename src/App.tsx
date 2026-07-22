@@ -10,10 +10,11 @@ import Contact from './components/Contact';
 function App() {
   return (
     <>
-      <div className="bg-glow glow-top-right"></div>
-      <div className="bg-glow glow-bottom-left" style={{ top: '40%' }}></div>
+      <a href="#hero" className="skip-link">
+        Skip to content
+      </a>
       <Navbar />
-      <main className="app-container">
+      <main id="main" className="app-container">
         <Hero />
         <About />
         <TechStack />
@@ -22,6 +23,13 @@ function App() {
         <AIFocus />
         <Contact />
       </main>
+      <footer className="site-footer">
+        <div className="app-container">
+          <p>
+            © {new Date().getFullYear()} M. Abeer Ahmed Siddiqui · <span>Built with care</span>
+          </p>
+        </div>
+      </footer>
     </>
   );
 }
