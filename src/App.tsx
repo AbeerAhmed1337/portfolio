@@ -6,6 +6,7 @@ import Projects from './components/Projects';
 import Experience from './components/Experience';
 import AIFocus from './components/AIFocus';
 import Contact from './components/Contact';
+import Chatbot from './components/Chatbot';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           </p>
         </div>
       </footer>
+      <Chatbot />
     </>
   );
 }

@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:api": "npm run serve --prefix portfolio-backend",
+    "dev:all": "concurrently -n \"frontend,backend\" -c \"cyan,magenta\" \"npm run dev\" \"npm run dev:api\"",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview"
@@ -20,6 +22,7 @@
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.2",
+    "concurrently": "^10.0.4",
     "oxlint": "^1.69.0",
     "typescript": "~6.0.2",
     "vite": "^8.1.0"
