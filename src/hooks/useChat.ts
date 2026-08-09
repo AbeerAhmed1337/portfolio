@@ -98,7 +98,8 @@ export function useChat() {
       }
 
       if (!response.ok) {
-        throw new Error(`Request failed: ${response.status}`);
+        const errorData = await response.json().catch(() => ({ error: `Request failed with status ${response.status}` }));
+        throw new Error(errorData.error || `Request failed: ${response.status}`);
       }
 
       const data = await response.json() as { response: string; cached?: boolean };
@@ -133,14 +134,15 @@ export function useChat() {
 
       setState(prev => ({ ...prev, isLoading: false }));
     } catch (err) {
+      const errMsg = err instanceof Error ? err.message : 'Connection error';
       console.error('[useChat] Error:', err);
       setState(prev => ({
         ...prev,
         isLoading: false,
-        error: 'Something went wrong. Please try again.',
+        error: errMsg,
         messages: prev.messages.map(m =>
           m.id === assistantMsgId
-            ? { ...m, content: "I'm having trouble connecting. Please try again.", isLoading: false }
+            ? { ...m, content: `Connection error: ${errMsg}`, isLoading: false }
             : m
         ),
       }));

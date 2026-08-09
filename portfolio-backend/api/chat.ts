@@ -57,6 +57,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  // Check for required API keys
+  if (!process.env.DEEPSEEK_API_KEY || !process.env.PINECONE_API_KEY) {
+    console.error('[API Error] DEEPSEEK_API_KEY or PINECONE_API_KEY is not set in environment variables.');
+    return res.status(500).json({
+      error: 'Backend API keys are not configured. Please set DEEPSEEK_API_KEY and PINECONE_API_KEY in your environment variables.',
+    });
+  }
+
   // Extract IP address (Vercel provides this via x-forwarded-for)
   const ip =
     (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() ??
