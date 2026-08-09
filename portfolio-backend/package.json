@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-backend",
+  "version": "1.0.0",
+  "description": "Vercel Serverless RAG backend for Abeer Ahmed's portfolio AI assistant",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "vercel dev --listen 3001",
+    "ingest": "tsx scripts/ingest.ts",
+    "deploy": "vercel --prod",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@vercel/node": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "~5.6.0",
+    "vercel": "^58.7.1"
+  }
+}

@@ -1,9 +1,10 @@
 /// <reference types="vite/client" />
 
-declare module '*.pdf' {
+declare module '*.docx' {
   const src: string;
   export default src;
 }
+
 
 declare module '*.jpeg' {
   const src: string;

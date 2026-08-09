@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Briefcase, Code, Download, Send } from 'lucide-react';
-import cvFile from '../assets/Muhammad_Abeer_Ahmed_CV.pdf';
+import cvFile from '../assets/Muhammad_Abeer_Ahmed_Siddiqui_AI_Engineer_CV.docx?url';
 import SectionHeader from './ui/SectionHeader';
 import Button from './ui/Button';
 
@@ -30,9 +30,9 @@ const links = [
   {
     href: cvFile,
     label: 'Resume',
-    detail: 'Download CV (PDF)',
+    detail: 'Download CV (DOCX)',
     icon: Download,
-    download: 'Abeer_Ahmed_Siddiqui_CV.pdf',
+    download: 'Muhammad_Abeer_Ahmed_Siddiqui_AI_Engineer_CV.docx',
   },
 ];
 
