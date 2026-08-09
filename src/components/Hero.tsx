@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
 import profileImage from '../assets/WhatsApp Image 2026-06-23 at 9.47.29 PM.jpeg';
-import cvFile from '../assets/Muhammad_Abeer_Ahmed_CV.pdf';
+import cvFile from '../assets/Muhammad_Abeer_Ahmed_Siddiqui_AI_Engineer_CV.docx?url';
 import Button from './ui/Button';
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -51,7 +51,7 @@ const Hero = () => {
             <Button href="#projects">
               View My Work <ArrowRight size={18} aria-hidden />
             </Button>
-            <Button href={cvFile} download="Abeer_Ahmed_Siddiqui_CV.pdf" variant="secondary">
+            <Button href={cvFile} download="Muhammad_Abeer_Ahmed_Siddiqui_AI_Engineer_CV.docx" variant="secondary">
               <Download size={18} aria-hidden /> Download CV
             </Button>
             <Button href="#contact" variant="ghost">
